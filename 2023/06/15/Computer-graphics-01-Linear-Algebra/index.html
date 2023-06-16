@@ -28,8 +28,15 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/01.png">
 <meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/02.png">
+<meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/03.png">
+<meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/04.png">
+<meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/05.png">
+<meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/06.png">
+<meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/07.png">
+<meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/08.png">
+<meta property="og:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/09.png">
 <meta property="article:published_time" content="2023-06-15T05:21:35.000Z">
-<meta property="article:modified_time" content="2023-06-15T06:49:13.657Z">
+<meta property="article:modified_time" content="2023-06-16T07:42:13.449Z">
 <meta property="article:author" content="yurl">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yurl2018.github.io/2023/06/15/Computer-graphics-01-Linear-Algebra/01.png">
@@ -115,7 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F-x2F-%E7%9F%A2%E9%87%8F-Vectors"><span class="nav-number">1.</span> <span class="nav-text">向量&#x2F;矢量	 Vectors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text">向量规格化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E5%8A%A0%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">向量加法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87"><span class="nav-number">1.4.</span> <span class="nav-text">笛卡尔坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E4%B9%98"><span class="nav-number">1.5.</span> <span class="nav-text">点乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%89%E4%B9%98"><span class="nav-number">1.6.</span> <span class="nav-text">叉乘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E4%BA%A4%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="nav-number">1.7.</span> <span class="nav-text">正交坐标系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5-Matrices"><span class="nav-number">2.</span> <span class="nav-text">矩阵 Matrices</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91%E9%87%8F-x2F-%E7%9F%A2%E9%87%8F-Vectors"><span class="nav-number">1.</span> <span class="nav-text">向量&#x2F;矢量	 Vectors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E8%A7%84%E6%A0%BC%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text">向量规格化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E5%8A%A0%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">向量加法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87"><span class="nav-number">1.4.</span> <span class="nav-text">笛卡尔坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E4%B9%98%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">向量乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%82%B9%E4%B9%98"><span class="nav-number">1.5.1.</span> <span class="nav-text">点乘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%89%E4%B9%98"><span class="nav-number">1.5.2.</span> <span class="nav-text">叉乘</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5-Matrices"><span class="nav-number">2.</span> <span class="nav-text">矩阵 Matrices</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5-1"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5-%E7%9F%A9%E9%98%B5-%E4%B9%98%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">矩阵-矩阵 乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5-%E5%90%91%E9%87%8F-%E4%B9%98%E6%B3%95"><span class="nav-number">2.3.</span> <span class="nav-text">矩阵-向量 乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BD%AC%E7%BD%AE"><span class="nav-number">2.4.</span> <span class="nav-text">矩阵的转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%BD%8D%E7%9F%A9%E9%98%B5%E5%92%8C%E9%80%86%E7%9F%A9%E9%98%B5"><span class="nav-number">2.5.</span> <span class="nav-text">单位矩阵和逆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F%E7%9A%84%E5%90%91%E9%87%8F%E4%B9%98%E6%B3%95"><span class="nav-number">2.6.</span> <span class="nav-text">矩阵形式的向量乘法</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -194,9 +201,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-06-15 13:21:35 / 修改时间：14:49:13" itemprop="dateCreated datePublished" datetime="2023-06-15T13:21:35+08:00">2023-06-15</time>
+      <time title="创建时间：2023-06-15 13:21:35" itemprop="dateCreated datePublished" datetime="2023-06-15T13:21:35+08:00">2023-06-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-16 15:42:13" itemprop="dateModified" datetime="2023-06-16T15:42:13+08:00">2023-06-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,9 +256,124 @@
 </ul>
 <h3 id="笛卡尔坐标"><a href="#笛卡尔坐标" class="headerlink" title="笛卡尔坐标"></a>笛卡尔坐标</h3><img src="/2023/06/15/Computer-graphics-01-Linear-Algebra/02.png" class="" title="笛卡尔坐标">
 <ul>
-<li>X 和 Y 可以是任意向量<br>$$<br>\begin{matrix}<br>  1 &amp; x &amp; x^2 \<br>  1 &amp; y &amp; y^2 \<br>  1 &amp; z &amp; z^2 \<br>\end{matrix}<br>$$</li>
+<li>X 和 Y 可以是任意向量</li>
 </ul>
-<h3 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h3><h3 id="叉乘"><a href="#叉乘" class="headerlink" title="叉乘"></a>叉乘</h3><h3 id="正交坐标系"><a href="#正交坐标系" class="headerlink" title="正交坐标系"></a>正交坐标系</h3><h2 id="矩阵-Matrices"><a href="#矩阵-Matrices" class="headerlink" title="矩阵 Matrices"></a>矩阵 Matrices</h2>
+<p>$$<br>\boldsymbol{A} &#x3D;<br>\begin{pmatrix}<br>    x \\<br>    y<br>\end{pmatrix}<br>$$</p>
+<p>$$<br>A^T &#x3D; (x, y)<br>$$</p>
+<p>$$<br>\Vert A \Vert &#x3D; \sqrt {x^2 + y^2}<br>$$</p>
+<h3 id="向量乘法"><a href="#向量乘法" class="headerlink" title="向量乘法"></a>向量乘法</h3><h4 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h4><img src="/2023/06/15/Computer-graphics-01-Linear-Algebra/03.png" class="" title="点乘">
+<p>$$<br>\vec{a} \cdot \vec{b} &#x3D; \Vert \vec{a} \Vert \Vert \vec{b} \Vert \cos \theta<br>$$<br>$$<br>\cos \theta &#x3D; \frac{\vec{a} \cdot \vec{b}}{\Vert \vec{a} \Vert \Vert \vec{b} \Vert}<br>$$</p>
+<ul>
+<li><p>单位向量：<br>$$<br>\cos \theta &#x3D; \hat a \cdot \hat b<br>$$</p>
+</li>
+<li><p>性质：<br>$$<br>\vec{a} \cdot \vec{b} &#x3D; \vec{b} \cdot \vec{a}<br>$$<br>$$<br>\vec{a} \cdot (\vec{b} + \vec{c}) &#x3D; \vec{a} \cdot \vec{b} + \vec{a} \cdot \vec{c}<br>$$</p>
+</li>
+</ul>
+<p>$$<br>(k\vec{a}) \cdot \vec{b} &#x3D; \vec{a} \cdot (k\vec{b}) &#x3D; k(\vec{a} \cdot \vec{b})<br>$$</p>
+<p>笛卡尔坐标系中的点乘：</p>
+<ul>
+<li><p>二维<br>$$<br>\vec{a} \cdot \vec{b} &#x3D;<br>\begin{pmatrix}<br>  x_a \\<br>  y_a<br>\end{pmatrix}<br>\cdot<br>\begin{pmatrix}<br>  x_b \\<br>  y_b<br>\end{pmatrix} &#x3D;<br>x_a x_b + y_a y_b<br>$$</p>
+</li>
+<li><p>三维<br>$$<br>\vec{a} \cdot \vec{b} &#x3D;<br>\begin{pmatrix}<br>  x_a \\<br>  y_a \\<br>  z_a<br>\end{pmatrix}<br>\cdot<br>\begin{pmatrix}<br>  x_b \\<br>  y_b \\<br>  z_b<br>\end{pmatrix} &#x3D;<br>x_a x_b + y_a y_b + z_a z_b<br>$$</p>
+</li>
+</ul>
+<p>图形学中的点乘:</p>
+<ul>
+<li><p>计算两个向量间的角度（如： 光线源和表面间的夹角余弦）</p>
+</li>
+<li><p>一个向量在另一个向量上的投影</p>
+<img src="/2023/06/15/Computer-graphics-01-Linear-Algebra/04.png" class="" title="向量投影">
+</li>
+<li><p>测量两个向量的接近程度</p>
+</li>
+<li><p>分解向量</p>
+<img src="/2023/06/15/Computer-graphics-01-Linear-Algebra/05.png" class="" title="分解向量">
+</li>
+<li><p>确定前后 forward backward</p>
+<img src="/2023/06/15/Computer-graphics-01-Linear-Algebra/06.png" class="" title="确定前后"></li>
+</ul>
+<h4 id="叉乘"><a href="#叉乘" class="headerlink" title="叉乘"></a>叉乘</h4><img src="/2023/06/15/Computer-graphics-01-Linear-Algebra/07.png" class="" title="叉乘">
+
+<ul>
+<li>交叉积是对两个初始矢量的正交</li>
+<li>方向由右手规则决定</li>
+<li>有助于构建坐标系</li>
+<li>性质<br>$$<br>\vec{x} \times \vec{y} &#x3D; +\vec{z}<br>$$<br>$$<br>\vec{y} \times \vec{x} &#x3D; -\vec{z}<br>$$<br>$$<br>\vec{y} \times \vec{z} &#x3D; +\vec{x}<br>$$<br>$$<br>\vec{z} \times \vec{y} &#x3D; -\vec{x}<br>$$<br>$$<br>\vec{z} \times \vec{x} &#x3D; +\vec{y}<br>$$<br>$$<br>\vec{x} \times \vec{z} &#x3D; -\vec{y}<br>$$</li>
+</ul>
+<p>$$<br>\vec{a} \times \vec{b} &#x3D; -\vec{b} \times \vec{a}<br>$$<br>$$<br>\vec{a} \times \vec{a} &#x3D; 0<br>$$<br>$$<br>\vec{a} \times (\vec{b} + \vec{c}) &#x3D; \vec{a} \times \vec{b} +  \vec{a} \times \vec{c})<br>$$<br>$$<br>\vec{a} \times (k\vec{b}) &#x3D; k(\vec{a} \times \vec{b})<br>$$</p>
+<ul>
+<li><p>笛卡尔公式<br>$$<br>\vec{a} \times \vec{b} &#x3D;<br>\begin{pmatrix}<br>  y_a z_b - y_b z_a \\<br>  z_a x_b - x_a z_b \\<br>  x_a y_b - y_a x_b<br>\end{pmatrix}<br>$$</p>
+</li>
+<li><p>图形学中的叉乘</p>
+<blockquote>
+<ul>
+<li>确定左右</li>
+</ul>
+</blockquote>
+<img src="/2023/06/15/Computer-graphics-01-Linear-Algebra/08.png" class="" title="确定左右">
+<blockquote>
+<ul>
+<li>确定内外</li>
+</ul>
+</blockquote>
+<img src="/2023/06/15/Computer-graphics-01-Linear-Algebra/09.png" class="" title="确定内外">
+</li>
+<li><p>正交基&#x2F;坐标框架</p>
+<blockquote>
+<ul>
+<li>对表示点、位置、地点很重要</li>
+<li>通常情况下，有许多套坐标系<blockquote>
+<p>全局、本地、世界、模型、模型的各个部分… </p>
+</blockquote>
+</li>
+<li>关键问题是在这些系统&#x2F;基之间的转换 (参见下章)</li>
+</ul>
+</blockquote>
+</li>
+<li><p>任何一组的3个向量（在3D中）:<br>$$<br>\Vert \vec{u} \Vert &#x3D; \Vert \vec{v} \Vert &#x3D; \Vert \vec{w} \Vert &#x3D; 1<br>$$<br>$$<br>\vec{u} \cdot \vec{v} &#x3D; \vec{v} \cdot \vec{w} &#x3D; \vec{u} \cdot \vec{w} &#x3D; 0<br>$$<br>$$<br>\vec{w} &#x3D; \vec{w} \times \vec{v}<br>$$</p>
+</li>
+</ul>
+<p>$$<br>\vec{p} &#x3D; (\vec{p} \cdot \vec{u})\vec{u} + (\vec{p} \cdot \vec{v})\vec{v} + (\vec{p} \cdot \vec{w})\vec{w}<br>$$</p>
+<h2 id="矩阵-Matrices"><a href="#矩阵-Matrices" class="headerlink" title="矩阵 Matrices"></a>矩阵 Matrices</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>萦绕在每门CS课程中的神奇的二维数组</li>
+<li>在图形学中，普遍用于表示变换<blockquote>
+<p>平移、旋转、剪切、缩放</p>
+</blockquote>
+</li>
+<li>数字阵列（m×n&#x3D; m行，n列）<br>$$<br>\begin{pmatrix}<br>  1&amp;3 \\<br>  5&amp;2 \\<br>  0&amp;4<br>\end{pmatrix}<br>$$</li>
+</ul>
+<h3 id="矩阵-矩阵-乘法"><a href="#矩阵-矩阵-乘法" class="headerlink" title="矩阵-矩阵 乘法"></a>矩阵-矩阵 乘法</h3><ul>
+<li>A矩阵的列必须等于B矩阵的行，才能相乘 (M x N) (N x P) &#x3D; (M x P)<br>$$<br>\begin{pmatrix}<br>  1&amp;3 \\<br>  5&amp;2 \\<br>  0&amp;4<br>\end{pmatrix}<br>\begin{pmatrix}<br>  3&amp;6&amp;9&amp;4 \\<br>  2&amp;7&amp;8&amp;3<br>\end{pmatrix}<br>$$</li>
+<li>上面矩阵相乘的结果： 乘积中的元素（i，j）是A的第i行和B的第j列的点积</li>
+<li>性质<blockquote>
+<ul>
+<li>交换律不适用： (AB和BA一般来说是不同的)</li>
+<li>关联和分配<blockquote>
+<ul>
+<li>(AB)C&#x3D;A(BC) </li>
+<li>A(B+C) &#x3D; AB + AC </li>
+<li>(A+B)C &#x3D; AC + BC</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="矩阵-向量-乘法"><a href="#矩阵-向量-乘法" class="headerlink" title="矩阵-向量 乘法"></a>矩阵-向量 乘法</h3><ul>
+<li>将向量视为列矩阵（mx1）</li>
+<li>关于Y轴的二维翻转<br>$$<br>\begin{pmatrix}<br>  -1&amp;0 \\<br>  0&amp;-1<br>\end{pmatrix}<br>\begin{pmatrix}<br>  x \\<br>  y<br>\end{pmatrix}&#x3D;<br>\begin{pmatrix}<br>  -x \\<br>  y<br>\end{pmatrix}<br>$$</li>
+</ul>
+<h3 id="矩阵的转置"><a href="#矩阵的转置" class="headerlink" title="矩阵的转置"></a>矩阵的转置</h3><ul>
+<li>切换行和列(ij -&gt; ji)<br>$$<br>{\begin{pmatrix}<br>  1&amp;2 \\<br>  3&amp;4 \\<br>  5&amp;6<br>\end{pmatrix}}^T&#x3D;<br>\begin{pmatrix}<br>  1&amp;3&amp;5 \\<br>  2&amp;4&amp;6<br>\end{pmatrix}<br>$$</li>
+<li>性质<br>$$<br>(AB)^T &#x3D; B^T A^T<br>$$</li>
+</ul>
+<h3 id="单位矩阵和逆矩阵"><a href="#单位矩阵和逆矩阵" class="headerlink" title="单位矩阵和逆矩阵"></a>单位矩阵和逆矩阵</h3><p>$$<br>I_{3x3}&#x3D;<br>\begin{pmatrix}<br>    1&amp;0&amp;0 \\<br>    0&amp;1&amp;0 \\<br>    0&amp;0&amp;1<br>\end{pmatrix}<br>$$<br>$$<br>AA^{-1}&#x3D;A^{-1}A&#x3D;I<br>$$<br>$$<br>{(AB)}^{-1}&#x3D;B^{-1}A^{-1}<br>$$</p>
+<h3 id="矩阵形式的向量乘法"><a href="#矩阵形式的向量乘法" class="headerlink" title="矩阵形式的向量乘法"></a>矩阵形式的向量乘法</h3><ul>
+<li>点乘<br>$$<br>\vec{a} \cdot \vec{b} &#x3D; {\vec{a}}^T \vec{b}&#x3D;<br>\begin{pmatrix}<br>  x_a&amp;y_a&amp;z_a<br>\end{pmatrix}<br>\begin{pmatrix}<br>  x_b \\<br>  y_b \\<br>  z_b<br>\end{pmatrix}&#x3D;<br>(x_a x_b + y_a y_b + z_a z_b)<br>$$</li>
+<li>叉乘<br>$$<br>\vec{a} \times \vec{b} &#x3D; A^* \vec{b}&#x3D;<br>\begin{pmatrix}<br>  0&amp;-z_a&amp;y_a \\<br>  z_a&amp;0&amp;-x_a \\<br>  -y_a&amp;x_a&amp;0<br>\end{pmatrix}<br>\begin{pmatrix}<br>  x_b \\<br>  y_b \\<br>  z_b<br>\end{pmatrix}<br>$$</li>
+</ul>
+
     </div>
 
     

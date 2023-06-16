@@ -48,7 +48,7 @@
 <meta property="og:image" content="https://yurl2018.github.io/2023/03/30/Using-neural-nets-to-recognize-handwritten-digits/11.png">
 <meta property="og:image" content="https://yurl2018.github.io/2023/03/30/Using-neural-nets-to-recognize-handwritten-digits/12.png">
 <meta property="article:published_time" content="2023-03-30T05:19:19.000Z">
-<meta property="article:modified_time" content="2023-06-12T07:00:32.272Z">
+<meta property="article:modified_time" content="2023-06-16T04:39:25.168Z">
 <meta property="article:author" content="yurl">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yurl2018.github.io/2023/03/30/Using-neural-nets-to-recognize-handwritten-digits/digits.png">
@@ -221,7 +221,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-12 15:00:32" itemprop="dateModified" datetime="2023-06-12T15:00:32+08:00">2023-06-12</time>
+      <time title="修改时间：2023-06-16 12:39:25" itemprop="dateModified" datetime="2023-06-16T12:39:25+08:00">2023-06-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -248,9 +248,9 @@
 <span id="more"></span>
 
 <p>例子中输入为<code>3</code>个（可以有更多或更少的输入，由加权和$\sum_j w_j x_j$大于或小于<code>threshold</code>来决定输出要么<code>0</code>要么<code>1</code>）<code>threshold</code>是一个实数，他是神经元的一个参数。<br>设权重为 $w_1$, $w_2$, $w_3$</p>
-<p>\begin{eqnarray}<br>  \mbox{output} &amp; &#x3D; &amp; \left{ \begin{array}{ll}<br>      0 &amp; \mbox{if } \sum_j w_j x_j \leq \mbox{ threshold} \<br>      1 &amp; \mbox{if } \sum_j w_j x_j &gt; \mbox{ threshold}<br>      \end{array} \right.<br>\tag{1}\end{eqnarray}</p>
+<p>\begin{eqnarray}<br>  \mbox{output} &#x3D;<br>  \begin{array}{ll}<br>      0 &amp; \mbox{if } \sum_j w_j x_j \leq \mbox{ threshold} \\<br>      1 &amp; \mbox{if } \sum_j w_j x_j &gt; \mbox{ threshold}<br>  \end{array}<br>\tag{1}\end{eqnarray}</p>
 <p>以上这就是感知器如何工作的全部内容，这就是基本的数学模型。您可以考虑感知器的一种方式是，它是一种通过权衡证据做出决策的设备。<br>简化描述感知器的方式： 条件$\sum_j w_j x_j &gt; \mbox{threshold}$很麻烦，用两个符号来简化他， 第一个变化是$\sum_j w_j x_j$作为一个点积，$w \cdot x \equiv \sum_j w_j x_j$，其中<code>w</code> <code>x</code>是向量，其分量分别是权重和输入，第二个变化是将阈值移到不等式的另一边，并用所谓的感知器偏差代替它 $b \equiv<br>-\mbox{threshold}$使用偏差而不是阈值，感知器规则可以重写:</p>
-<p>\begin{eqnarray}<br>  \mbox{output} &#x3D; \left{<br>    \begin{array}{ll}<br>      0 &amp; \mbox{if } w\cdot x + b \leq 0 \<br>      1 &amp; \mbox{if } w\cdot x + b &gt; 0<br>    \end{array}<br>  \right.<br>\tag{2}\end{eqnarray}</p>
+<p>\begin{eqnarray}<br>  \mbox{output} &#x3D;<br>    \begin{array}{ll}<br>      0 &amp; \mbox{if } w\cdot x + b \leq 0 \\<br>      1 &amp; \mbox{if } w\cdot x + b &gt; 0<br>    \end{array}<br>\tag{2}\end{eqnarray}</p>
 <p>您可以将偏差视为衡量感知器输出<code>1</code>的难易程度。或者用更生物学的术语来说，偏差是衡量感知器 启动难易程度的指标。</p>
 <h2 id="Sigmoid-神经元"><a href="#Sigmoid-神经元" class="headerlink" title="Sigmoid 神经元"></a>Sigmoid 神经元</h2><p>事实上，网络中任何单个感知器的权重或偏差的微小变化有时会导致该感知器的输出完全翻转，例如从0到1. 这种翻转可能会导致网络其余部分的行为以某种非常复杂的方式完全改变。因此，虽然您的“9”现在可能被正确分类，但所有其他图像上的网络行为可能已经以某种难以控制的方式完全改变。这使得很难看到如何逐渐修改权重和偏差，以使网络更接近所需的行为。也许有一些巧妙的方法可以解决这个问题。但我们如何让感知器网络进行学习并不是很明显。</p>
 <p>我们可以通过引入一种称为sigmoid神经元的新型人工神经元来克服这个问题。Sigmoid神经元类似于感知器，但经过修改后，它们的权重和偏差的微小变化只会导致其输出的微小变化。这是允许 sigmoid 神经元网络学习的关键事实。</p>
